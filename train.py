@@ -101,7 +101,6 @@ if __name__ == "__main__":
         learning_rate=cfg.learning_rate,
         weight_decay=cfg.weight_decay,
         fp16=cfg.fp16,
-        bf16=cfg.bf16,
         #tf32=True,
         max_grad_norm=cfg.max_grad_norm,
         warmup_ratio=cfg.warmup_ratio,
