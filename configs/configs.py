@@ -27,11 +27,11 @@ output_dir = './'
 # Number of training epochs
 num_train_epochs = 15 #1
 # Enable fp16/bf16 training (set bf16 to True with an A100)
-fp16 = False
+fp16 = True
 # Batch size per GPU for training
 per_device_train_batch_size = 4
 # Number of update steps to accumulate the gradients for
-gradient_accumulation_steps = 2 # 2
+gradient_accumulation_steps = 4 # 2
 # Enable gradient checkpointing
 gradient_checkpointing = True
 # Maximum gradient normal (gradient clipping)
@@ -62,6 +62,6 @@ disable_tqdm=False
 ################################################################################
 # Maximum sequence length to use
 # max sequence length for model and packing of the dataset
-max_seq_length = 2048 # None
+max_seq_length = 1024 # None
 # Pack multiple short examples in the same input sequence to increase efficiency
 packing = True #False

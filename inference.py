@@ -36,7 +36,7 @@ if __name__ == '__main__':
     """
 
     input_ids = tokenizer(prompt, return_tensors="pt", truncation=True).input_ids.cuda()
-    outputs = model.generate(input_ids=input_ids, max_new_tokens=100, do_sample=True, top_p=0.9,temperature=0.3)
+    outputs = model.generate(input_ids=input_ids, max_new_tokens=600, do_sample=True, top_p=0.9,temperature=0.3)
 
     print(f"Prompt:\n{prompt}\n")
     print(f"Generated instruction:\n{tokenizer.batch_decode(outputs.detach().cpu().numpy(), skip_special_tokens=True)[0][len(prompt):]}")
