@@ -23,7 +23,7 @@ lora_dropout = 0.1
 # Output directory where the model predictions and checkpoints will be stored
 output_dir = './'
 # Number of training epochs
-num_train_epochs = 5 #1
+num_train_epochs = 10 #1
 # Enable fp16/bf16 training (set bf16 to True with an A100)
 fp16 = True
 # Batch size per GPU for training
@@ -52,7 +52,7 @@ group_by_length = False #True
 # Save checkpoint every X updates steps
 save_steps = 0
 # Log every X updates steps
-logging_steps = 25
+logging_steps = 200
 # Disable tqdm progress bars, 
 disable_tqdm=False
 ################################################################################
@@ -60,6 +60,6 @@ disable_tqdm=False
 ################################################################################
 # Maximum sequence length to use
 # max sequence length for model and packing of the dataset
-max_seq_length = 1024 # None
+max_seq_length = 512 # None
 # Pack multiple short examples in the same input sequence to increase efficiency
 packing = True #False
