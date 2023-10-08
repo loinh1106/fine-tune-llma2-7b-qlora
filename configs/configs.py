@@ -1,5 +1,3 @@
-epochs = 15
-bf16 = True
 
 use_4bit = True
     # Compute dtype for 4-bit base models
@@ -25,7 +23,7 @@ lora_dropout = 0.1
 # Output directory where the model predictions and checkpoints will be stored
 output_dir = './'
 # Number of training epochs
-num_train_epochs = 15 #1
+num_train_epochs = 5 #1
 # Enable fp16/bf16 training (set bf16 to True with an A100)
 fp16 = True
 # Batch size per GPU for training
