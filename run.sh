@@ -1,0 +1,1 @@
+python train.py --model-name NousResearch/Llama-2-7b-hf --hf_repo loinh1106/llma2-7b-qlora-code-gen-instruct
