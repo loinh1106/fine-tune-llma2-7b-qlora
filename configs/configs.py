@@ -1,4 +1,3 @@
-
 use_4bit = True
     # Compute dtype for 4-bit base models
 bnb_4bit_compute_dtype = "float16"
@@ -21,7 +20,7 @@ lora_dropout = 0.1
 # TrainingArguments parameters
 ################################################################################
 # Output directory where the model predictions and checkpoints will be stored
-output_dir = './'
+output_dir = 'outputs'
 # Number of training epochs
 num_train_epochs = 10 #1
 # Enable fp16/bf16 training (set bf16 to True with an A100)

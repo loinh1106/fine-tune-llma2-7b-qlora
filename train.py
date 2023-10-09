@@ -15,6 +15,8 @@ import argparse
 from configs import configs as cfg
 
 os.environ["HF_HUB_TOKEN"] = "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"
+os.makedirs('outputs', exist_ok=True)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -29,7 +31,7 @@ if __name__ == "__main__":
     dataset_name = args.dataset
     dataset_split= args.split
     hf_model_repo= args.hf_repo
-    device_map = {"": 0}
+    device_map = "auto"
     
     
     load_dotenv()
@@ -42,8 +44,6 @@ if __name__ == "__main__":
 
     print(f"Training size: {len(trainset)}")
     print(f"Validation size: {len(valset)}")
-    print(trainset[randrange(len(trainset))])
-    print(valset[randrange(len(valset))])
 
 
     def format_instruction(sample):
@@ -59,9 +59,6 @@ if __name__ == "__main__":
     ### Response:
     {sample['output']}
     """
-
-    print(format_instruction(trainset[randrange(len(trainset))]))
-    print(format_instruction(valset[randrange(len(valset))]))
 
     compute_dtype = getattr(torch, cfg.bnb_4bit_compute_dtype)
 
@@ -126,7 +123,7 @@ if __name__ == "__main__":
     trainer.train()
     print("End Training")
     
-    trainer.save_model()
+    trainer.save_model('./')
     print("Model saved")
 
     del model
