@@ -22,7 +22,7 @@ lora_dropout = 0.1
 # Output directory where the model predictions and checkpoints will be stored
 output_dir = 'outputs'
 # Number of training epochs
-num_train_epochs = 1 #1
+num_train_epochs = 2 #1
 # Enable fp16/bf16 training (set bf16 to True with an A100)
 fp16 = True
 # Batch size per GPU for training
@@ -49,7 +49,7 @@ warmup_ratio = 0.03
 # Saves memory and speeds up training considerably
 group_by_length = False #True
 # Save checkpoint every X updates steps
-save_steps = 0
+save_steps = 1000
 # Log every X updates steps
 logging_steps = 200
 # Disable tqdm progress bars, 
