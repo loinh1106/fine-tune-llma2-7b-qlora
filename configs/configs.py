@@ -22,11 +22,11 @@ lora_dropout = 0.1
 # Output directory where the model predictions and checkpoints will be stored
 output_dir = 'outputs'
 # Number of training epochs
-num_train_epochs = 10 #1
+num_train_epochs = 1 #1
 # Enable fp16/bf16 training (set bf16 to True with an A100)
 fp16 = True
 # Batch size per GPU for training
-per_device_train_batch_size = 4
+per_device_train_batch_size = 16
 # Number of update steps to accumulate the gradients for
 gradient_accumulation_steps = 4 # 2
 # Enable gradient checkpointing

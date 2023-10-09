@@ -123,17 +123,9 @@ if __name__ == "__main__":
     trainer.train()
     print("End Training")
     
-    trainer.save_model('./')
+    trainer.save_model('./outputs')
     print("Model saved")
 
-    del model
-    del trainer
-    import gc
-    gc.collect()
-    gc.collect()
-    torch.cuda.empty_cache()
-    gc.collect()
-    
 
     model = AutoPeftModelForCausalLM.from_pretrained(
         args.output_dir,
